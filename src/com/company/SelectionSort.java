@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Collection;
+
 /**
  * Created by RENT on 2017-05-22.
  */
@@ -32,4 +34,16 @@ public class SelectionSort implements Sorter {
 
         return persons;
     }
+    public Person[] sortAll(Comparable[] coll) {
+
+        for (int i = 0; i < coll.length; i++) {
+            if(coll[i].compareTo(coll[i+1])>0){
+                swap(coll,i,i+1);
+            }
+        }
+
+
+        return persons;
+    }
+
 }

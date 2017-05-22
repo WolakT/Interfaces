@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Collection;
+
 /**
  * Created by RENT on 2017-05-22.
  */
@@ -16,7 +18,7 @@ public class BubbleSort implements Sorter {
                 System.out.println("to jest wejscie do petli nr " + i);
                 for (int j = 0; j <array.length-1 ; j++) {
                     //System.out.println("to jest wejscie do podpetli nr " + j);
-                    if(array[j].getAge()>array[j+1].getAge()){
+                    if(array[j].compareTo(array[j+1])>0){
                         swap(array,j,j+1);
                         swapped = true;
 
