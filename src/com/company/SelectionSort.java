@@ -8,24 +8,20 @@ public class SelectionSort implements Sorter {
     public Person[] sort(Person[] persons) {
         for (int i = 0; i < persons.length; i++) {
             for (int j = i; j < persons.length - 1; j++) {
-                if (persons[i].getAge() > persons[j + 1].getAge()) {
+                if (persons[i].compareTo(persons[j + 1]) > 0) {
                     swap(persons, i, j + 1);
-                }
-                else if (persons[i].getAge() == persons[j + 1].getAge()) {
-                    if(!isHigherInAlphabet(persons[i].getName(),persons[j+1].getName())){
-                        swap(persons, i, j+1);
-                    }
                 }
             }
         }
 
         return persons;
     }
+
     //checks alphabetical order of two Strings and returns true if first is higher
     public static boolean isHigherInAlphabet(String first, String second) {
-        if(first.compareTo(second)<0){
+        if (first.compareTo(second) < 0) {
             return true;
-        }else return false;
+        } else return false;
 
     }
 
